@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+  <title>Tags HTML</title>
+</head>
+<body>
+  <main class="bg-blue-100 min-h-screen">
+    <h1 class="shadow mb-4 text-lg text-center p-2 bg-white text-blue-600 font-extrabold">Tags importantes no HTML 5</h1>
+    <section class="p-4">
+      <h2 class="text-xl font-bold text-blue-900">#1 Details</h2>
+
+      <details>
+        <summary class="text-blue-900">Objetivos do estudo</summary>
+        <section class="ml-4">
+          <div>Adquirir conhecimentos</div>
+          <div>Aprender mais</div>
+          <div>Estar sempre atento e curioso</div>
+        </section>
+      </details>
+    </section>
+    <section class="p-4">
+      <h2 class="text-xl font-bold text-blue-900">#2 Datalist</h2>
+      <label for="weekday" class="text-blue-900 mr-2">Seleciono o dia</label>
+      <input list="weekday"type="text" class="text-blue-600 pl-2 rounded shadow text-sm">
+        <datalist id="weekday">
+          <option value="Domingo"/>
+          <option value="Segunda"/>
+          <option value="Terça"/>
+          <option value="Quarta"/>
+          <option value="Quinta"/>
+          <option value="Sexta"/>
+          <option value="Sábado"/>
+        </datalist>
+    </section>
+
+    <section class="p-4">
+      <h2 class="text-xl font-bold text-blue-900">#3 contenteditable</h2>
+      <h3 class="text-sm italic">Torna qualquer conteúdo editável</h3>
+
+      <ul contenteditable class="text-sm ml-2">
+        <li>1. Áreas editaveis</li>
+        <li>2. Apenas no HTML</li>
+        <li>3. É preciso criar um método para salvar</li>
+      </ul>
+    </section>
+
+    <section class="p-4">
+      <h2 class="text-xl font-bold text-blue-900">#4 Mark</h2>
+      <p>Criar uma <mark class="text-blue-900 bg-blue-200">marcação</mark> no texto que vc desejar</p>
+    </section>
+
+    <section class="p-4">
+      <h2 class="text-xl font-bold text-blue-900">#5 Cite e Blockquote</h2>
+      <blockquote>Fazer citações com blockquote torna o código mais semântico
+        <cite>Priscila Andreani</cite>
+      </blockquote>
+    </section>
+
+    
+    <section class="p-4">
+      <h2 class="text-xl font-bold text-blue-900">#6 Pro</h2>
+      <h3 class="italic text-sm">Bônus: script de animação da barra progress!</h3>
+    <progress id="bar" value="0" max="100">Progress: 20%</progress>
+    </section>
+
+    <section class="p-4">
+      <h2 class="text-xl font-bold text-blue-900">#7 Optgroup</h2>
+      
+      <label for="avaible" class="text-blue-900 mr-2">Em Cartaz</label>
+      <select name="avaible" class="bg-white text-blue-600 pl-2 rounded shadow text-sm">
+        <optgroup label="Filme clássicos">
+          <option value="1">Clube da Luta </option>
+          <option value="2"/>Cidade de Deus </optgroup>
+        </optgroup>
+
+        <optgroup label="Filmes Novos">
+          <option value="3">Horse Girl</option>
+          <option value="4">Miss America </option>
+        </optgroup>
+    </section>
+  </main>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      let
+      progress = 0,
+      incrementSpeed = 1,
+      progressBar = document.getElementById('bar');
+    
+      let progressInterval = setInterval(()=>{
+        progress += incrementSpeed;
+        progressBar.value = progress;
+
+        if(progress >= 100){
+          clearInterval(progressInterval);
+        }
+      }, 10);
+  })
+  </script>
+</body>
+
+</html>
