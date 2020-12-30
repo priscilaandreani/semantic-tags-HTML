@@ -25,3 +25,4 @@ author: Priscila Andreani
 <img src="./Option.png">
 
 
+Visualização [aqui](https://priscilaandreani.github.io/tagsHTML/)
